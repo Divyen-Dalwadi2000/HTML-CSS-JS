@@ -1,0 +1,9 @@
+body {
+
+    background-color: #f1de34;
+    transition: background-color 1s ease-in-out 100ms;
+}
+
+body:hover {
+    background-color: #FF1493;
+}
