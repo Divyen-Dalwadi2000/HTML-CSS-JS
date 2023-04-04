@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set 1</title>
+    <link rel="stylesheet" href="s1.css
+    ">
+</head>
+
+<body>
+    <div class="head">
+        <h1>SESSIONAL 1 </h1>
+        <H2>SET 1</H2>
+    </div>
+
+    <fieldset>
+        <legend>Eter the three name </legend>
+        <div CLASS="form">
+            <form>
+
+                <label for="fname">Enter First name : </label>
+                <input class="input" type="text" name="fname" id="fname">
+                <br>
+                <label for="sname">Enter Second name : </label>
+                <input class="input" type="text" name="sname" id="sname">
+                <br>
+                <label for="tname">Enter Third name : </label>
+                <input class="input" type="text" name="tname" id="tname"><br>
+                <div id="btn">
+                    <input onclick="onSubmit()" type="submit" name="submit" value="Submit">
+                    <input type="reset" name="reset" value="Clear">
+                </div>
+            </form>
+        </div>
+
+    </fieldset>
+    <script src="s1.js"></script>
+    <!-- <script>
+        function onSubmit() {
+
+            var names = new Array(3);
+            names[0] = document.getElementById("fname").value;
+            names[1] = document.getElementById("sname").value;
+            names[2] = document.getElementById("tname").value;
+
+            document.write("---------------The Entered name are---------------<br>")
+            // document.write("The First name is : " + names[0] + "<br>");
+            // document.write("The Second name is : " + names[1] + "<br>");
+            // document.write("The Third name is : " + names[2] + "<br>");
+            a = 0;
+            for (n in names) {
+                a++;
+                document.writeln(a, ") name is : ", names[n]);
+                document.writeln("<br> ");
+            }
+
+            document.write("---------------The names After sorting---------------<br>")
+            b=0
+            names.sort();
+            for (n_n in names) {
+                b++;
+                document.writeln(b, ") name is : ", names[n_n]);
+                document.writeln("<br> ");
+            }
+        }
+
+    </script> -->
+</body>
+
+</html>
