@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(255, 0, 208, 0.854);
+    transition: background-color 2s ease-in-out 100ms;
+    /* background-image: url(ddj.png);
+    background-repeat: no-repeat;
+    background-size: 40.5em;
+    background-position: center center; */
+}
+
+body:hover {
+    background-color: rgb(183, 0, 255);
+}
+
+.img-container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+img {
+    margin: 0;
+    padding: 0;
+    width: 30em;
+    background-color: transparent;
+}
+
+nav {
+    border-radius: 8px;
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    display: block;
+    color: aqua;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 14px;
+}
+
+nav a:hover {
+    /* outline-offset: 3px; */
+    /*-- it's for button*/
+    background-color: #ddd;
+    color: black;
+    border-radius: 9px;
+}
