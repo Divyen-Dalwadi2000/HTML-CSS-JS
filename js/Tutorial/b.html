@@ -1,0 +1,36 @@
+<!-- program to swap two strings -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <lable>Enter value for a : </lable>
+    <input type="text" id="t1">
+    <br>
+    <lable>Enter value for b: </lable>
+    <input type="text" id="t2">
+    <br>
+    <input type="button" value="swap
+    " onclick="swap()">
+    <!-- ul>li*3>span.hello$
+    <ul>
+        <li><span class="hello1"></span></li>
+        <li><span class="hello2"></span></li>
+        <li><span class="hello3"></span></li>
+    </ul> -->
+    <script>
+        function swap() {
+            var temp = document.getElementById("t1").value;
+            document.getElementById("t1").value = document.getElementById("t2").value;
+            document.getElementById("t2").value = temp;
+        }
+    </script>
+</body>
+
+</html>
