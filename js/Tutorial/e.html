@@ -7,16 +7,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #divhead {
+            background-color: aqua;
+            height: 50px;
+            width: 150px;
+            text-align: center;
+            color: white;
+            font-size: 20;
+
+        }
+    </style>
 </head>
 
 <body onscroll="helpyou()">
     <div id="divcontainer">
         <div id="divhead">
-            <p onclick='divcontainer.style.visibility=hidden"'>
+            <p onclick='divcontainer.style.visibility="hidden"'>May i Help You
             </p>
         </div>
+        Full page of content
     </div>
 
+
+    <!--=========================================== -->
+    <script>
+
+        function helpyou() {
+            tpos = document.body.scrollTop;
+            document.getElementById('divhead').style.position = "absolute";
+            document.getElementById('divhead').style.top = tpos + 300;
+        }
+    </script>
 </body>
 
 </html>
