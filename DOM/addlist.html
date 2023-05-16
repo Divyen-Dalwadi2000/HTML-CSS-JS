@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DOM</title>
+    <style>
+        .change {
+            border: 3px solid white;
+            width: 100px;
+        }
+
+        .t_color {
+            color: aqua;
+        }
+
+        .body {
+            background-color: rgba(26, 14, 191, 0.628);
+        }
+    </style>
+</head>
+
+<body class="body">
+    <div>
+        <ul class="name_list">
+            <li>Meet</li>
+            <li>Dhrumil</li>
+            <li>Divyen</li>
+            <li>Milan</li>
+            <li>Mitesh</li>
+        </ul>
+    </div>
+    <input class="list_input" type="text">
+    <button class="AddList">Click me</button>
+    <script>
+        const userlist = document.querySelector(".name_list");
+        const listInput = document.querySelector(".list_input");
+        const addlistbtn = document.querySelector(".AddList");
+
+        addlistbtn.addEventListener("click", function () {
+            // create an li out of thin air
+
+            const newli = document.createElement("LI");
+
+            //----------------Instead of these print in console--------------
+            // const licontent = document.createTextNode("ABC");
+            // console.log(listInput.value); // =>> which values write in text box  then click the values print in console
+            //------------------Write this in one line to add in li -------------------
+            const licontent = document.createTextNode(listInput.value);
+            //================================================
+            // Add the input valu inside that new li 
+            newli.appendChild(licontent);
+            //================================================
+            //attaching the li to the user list
+            userlist.appendChild(newli);
+        });
+
+
+    </script>
+</body>
+
+</html>
