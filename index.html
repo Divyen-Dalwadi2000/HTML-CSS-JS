@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DOM</title>
+    <style>
+        .change {
+            border: 3px solid white;
+            width: 100px;
+        }
+
+        .t_color {
+            color: aqua;
+        }
+
+        .body {
+            background-color: rgba(0, 0, 0, 0.628);
+        }
+    </style>
+</head>
+
+<body class="body">
+    <div class="changer">
+
+        <h1 class="title"> Hello ! </h1>
+
+    </div>
+    <button class="changeColor">Click me</button>
+    <div>
+        <ul class="name_list">
+            <li>Meet</li>
+            <li>Dhrumil</li>
+            <li>Divyen</li>
+            <li>Milan</li>
+            <li>Mitesh</li>
+        </ul>
+    </div>
+    <script>
+        //========================================================
+        // const text = document.querySelector("h1");
+        const text = document.querySelector(".title");
+        // text.style.color = "red";
+        // text.style.backgroundColor = "yellow";
+
+        //========================================================
+        const chcolor = document.querySelector("button");
+
+        //========================================================
+        // we can select the css class directly
+        text.classList.add("change");   // add any class in tags 
+        text.classList.remove("t_color"); // remove any class in tags 
+
+        //========================================================
+        // chcolor.addEventListener("click", function () {
+        //     text.classList.toggle("change"); //  with these we can click and remove and add the csswhich is in .change
+        // })
+        4
+        //========================================================
+        // here we use "all" bcz of multipe "li"
+        // const userlist = document.querySelectorAll(".name_list li");
+
+        //  console.log(userlist);
+
+        //========================================================
+        const userlist = document.querySelectorAll(".name_list li");
+
+        for (user of userlist) {
+            user.addEventListener("click", function () {
+                this.style.color = "aqua";
+            })
+
+        }
+        //========================================================
+    </script>
+    <!-- <script src=""></script> -->
+</body>
+
+</html>
