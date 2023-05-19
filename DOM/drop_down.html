@@ -1,0 +1,40 @@
+<!doctype html>
+<html> 
+ <head> 
+  <style>
+    #iceCreamForm {
+      margin: 20px;
+    }
+    
+    #flavorList {
+      margin-bottom: 10px;
+    }
+  </style> 
+ </head> 
+ <body> 
+  <form id="iceCreamForm"> 
+   <div id="flavorList"> <label for="flavors">Select Flavors:</label> <select id="flavors" multiple> <option value="chocolate">Chocolate</option> <option value="vanilla">Vanilla</option> <option value="strawberry">Strawberry</option> <option value="mint">Mint</option> </select> 
+   </div> <label for="totalPrice">Total Price:</label> 
+   <input type="text" id="totalPrice" readonly> 
+  </form> 
+  <script>
+    const flavorSelect = document.getElementById("flavors");
+    const totalPriceInput = document.getElementById("totalPrice");
+
+    // Define prices for each flavor
+    const flavorPrices = {
+      chocolate: 2.5,
+      vanilla: 2.0,
+      strawberry: 2.0,
+      mint: 3.0
+    };
+
+    // Calculate total price when selection changes
+    flavorSelect.addEventListener("change", () => {
+      const selectedFlavors = Array.from(flavorSelect.selectedOptions, option => option.value);
+      const totalPrice = selectedFlavors.reduce((sum, flavor) => sum + flavorPrices[flavor], 0);
+      totalPriceInput.value = totalPrice.toFixed(2);
+    });
+  </script> 
+ 
+</body></html>
