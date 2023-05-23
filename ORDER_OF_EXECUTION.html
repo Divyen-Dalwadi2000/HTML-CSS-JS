@@ -1,0 +1,28 @@
+<!doctype html>
+<html> 
+ <head> 
+  <title>JavaScript Developer's Guide</title> 
+  <script>
+console.time("a");
+alert("This is the head.");
+console.timeEnd("a");
+ </script> 
+ </head> 
+ <body> 
+  <script>
+console.time("body1");
+alert("This is the body, before the message.");
+console.timeEnd("body1");
+ </script> 
+  <h1>Hello World</h1> 
+  <script>
+console.time("body2");
+alert("This is the body, after the message.");
+console.timeEnd("body2");
+ </script> 
+ 
+<script type="text/javascript" id="dcoder_script">var myParent = { a: 10, b: 50
+}
+var myChild = Object.create(myParent); var myGrandChild = Object.create(myChild);
+alert(myGrandChild.a); // will alert 10 myParent.a = 20;
+alert(myGrandChild.a); // will alert 20 alert(myChild.a); // will alert 20</script></body></html>
