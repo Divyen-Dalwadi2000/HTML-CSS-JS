@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Date</title>
+</head>
+
+<body>
+
+    <div id="dates" style="background-color: violet;">
+
+    </div>
+    <div style="background-color: yellowgreen;">
+
+        <h2 >The Set value are :
+        </h2>
+        <p id="setdate"></p>
+        <p id="setyear"></p>
+        <p id="sethour"></p>
+    </div>
+    <script>
+        var today = new Date();
+        var date = '<h2> == ALL DATE OBJEcTS FUNCTIONS ==  </h2><p> getDate() : ' + today.getDate() +
+                   '</p><p> getFullYear() : ' + today.getFullYear() +
+                   '</p><p> the Date is ther following format [toDateString()] : ' + today.toDateString() +
+                   '</p><p> the Time is ther following format [toTimeString()] : ' + today.toTimeString() +
+                   '</p><p> [toString()] : ' + today.toString() ;
+
+        var ele = document.getElementById('dates');
+        ele.innerHTML = date;
+
+        //==========================================================================================
+        var d = new Date();
+        d.setDate(15);
+        d.setFullYear(2015);
+        d.setHours(13);
+        var date = '<p> The Date Which we set : ' + d.getDate() + '</p>';
+        var year = '<p> The Year Which we set : ' + d.getFullYear() + '</p>';
+        var hour = '<p> The Hours Which we set : ' + d.getHours() + '</p>';
+
+        document.getElementById('setdate').innerHTML = date;
+        document.getElementById('setyear').innerHTML = year;
+        document.getElementById('sethour').innerHTML = hour;
+
+    </script>
+</body>
+
+</html>

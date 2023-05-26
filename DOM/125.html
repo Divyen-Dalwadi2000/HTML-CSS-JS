@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOM-Window object model</title>
+</head>
+
+<body>
+    <div id="info" style="background-color: yellow;">
+
+    </div>
+    <div  id="footer" style="background-color: aqua; "> 
+    </div>
+    <script>
+        var msg = '<h2> Browser Window  </h2> <p> width : ' + window.innerWidth + '</p>';
+        msg += '<p> Height : ' + window.innerHeight + '</p>';
+        msg += '<h2> History  </h2> <p> Items : ' + window.history.length + '</p>';
+        msg += '<h2>Screen  </h2><p> width : ' + window.screen.width + '</p>';
+        msg += '<p>Height  : ' + window.screen.height + '</p>';
+        // msg += 'ALERT: ' + window.alert() + '</p>'
+        // msg += 'Open: ' + window.open("https://javascriptbook.com/extras/") + '</p>'
+        // msg += 'Print: ' + window.print("") + '</p>'
+        var obj = document.getElementById('info');
+        obj.innerHTML = msg;
+
+
+        // document 
+        var foot = '<h2>Document Object Properties   </h2><p> Title : ' + document.title + '</p>'
+        foot += '<p> last Modified : ' + document.lastModified + '</p>'
+        foot += 'URL : ' + document.URL + '</p>'
+        foot += 'Domain : ' + document.domain + '</p>'
+        var footer = document.getElementById("footer");
+        footer.innerHTML = foot;
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Decimal Numbers </title>
+</head>
+
+<body>
+    <div id="info">
+
+    </div>
+    <div id="random" style="background-color: bisque;">
+
+    </div>
+    <script>
+        var originalNumber = 10.23456;
+        var msg = '<h2> original Number</h2> <p>' + originalNumber + '</p>';
+        msg += '<h2> 3 Decimal Places Number (toFixed(3)) </h2> <p>' + originalNumber.toFixed(3) + '</p>';
+        msg += '<h2> 3 Digit Number (toPrecision(3) )</h2> <p>' + originalNumber.toPrecision(3) + '</p>';
+        msg += '<h2>exponential Number</h2> <p>' + originalNumber.toExponential() + '</p>';
+
+        var ele = document.getElementById('info');
+        ele.innerHTML = msg;
+
+
+
+        var randomNumber = Math.random();
+        var rn2 = (Math.random() * 10);
+        var rn3 = (Math.floor(Math.random() * 10)+1);
+
+        var el = document.getElementById('random');
+        el.innerHTML = '<h2> Random</h2> <p>' + randomNumber + '</p>';
+        el.innerHTML += '<h2> Random Number 2(* 10)</h2> <p>' + rn2 + '</p>';
+        el.innerHTML += '<h2> Random Number 3(Math.floor)  </h2> <p>' + rn3 + '</p>';
+    </script>
+</body>
+
+</html>
